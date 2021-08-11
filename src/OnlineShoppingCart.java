@@ -1,16 +1,16 @@
 import  java.util.*;
-public class OnlineShoppingCart
+public class OnlineShoppingCart extends Exception
 {
     static int choice;
     int selection, total_amt, amt, no_of_items, no_of_sofa = 5, no_of_table = 5, no_of_spices = 5, no_of_oranges = 10, no_of_Bluetooth_Speaker = 5, no_of_television = 5,total = 0;
     int price_of_sofa = 50000, price_of_table = 25000, price_of_spice = 250, price_of_orange = 15, price_of_Bluetooth_Speaker = 7000, price_of_television = 90000;
-    public void ContinueShopping(int amt)throws Exception
+    public void ContinueShopping(int amt) throws Exception
     {
         total_amt +=amt;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter YES if you wish to continue shopping");
         String answer = s.nextLine();
-        if(answer.equals("Yes"))
+        if(answer.equals("YES"))
         {
             System.out.println("Taking u to display class");
             Display();
@@ -20,7 +20,8 @@ public class OnlineShoppingCart
             System.out.println("Amount: "+total_amt);
         }
     }
-    public void DisplayChoice(int choice) throws Exception {
+    public void DisplayChoice(int choice) throws Exception
+    {
         Scanner s = new Scanner(System.in);
         switch (choice)
         {
